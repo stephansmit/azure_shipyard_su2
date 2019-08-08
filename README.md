@@ -1,4 +1,4 @@
-# Scripts to run SU2 containers with Azure Shipyard using a Singularity Shipyard Container
+# Scripts to run SU2 Singularity Containers on Azure Shipyard using a Singularity Shipyard Container
 
 Scripts to run [SU2](https://su2code.github.io/) with [Open MPI](https://www.open-mpi.org/) version 1.10.2 using a [SU2 Singularity Container](https://github.com/stephansmit/su2_containers) on [Azure Shipyard](https://batch-shipyard.readthedocs.io/en/latest/00-introduction/") with a [Shipyard Singularity Container](https://github.com/stephansmit/shipyard_containers)
 
