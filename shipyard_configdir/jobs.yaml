@@ -1,0 +1,5 @@
+job_specifications:
+- id: myjob
+  tasks:
+  - command: wc -l /etc/group
+    docker_image: busybox

@@ -1,0 +1,20 @@
+global_resources:
+  singularity_images:
+  - shub://singularityhub/busybox
+  files:
+  - destination:
+      data_transfer:
+        method: multinode_scp
+        ssh_private_key: id_rsa_shipyard
+        scp_ssh_extra_options: -c aes256-gcm@openssh.com
+        rsync_extra_options: ''
+        split_files_megabytes: 500
+        max_parallel_transfers_per_node: 2
+      relative_destination_path: myfiles
+      shared_data_volume: glustervol
+    source:
+      exclude:
+      - '*.bak'
+      include:
+      - '*.dat'
+      path: /some/local/path/dir
