@@ -18,7 +18,7 @@ Login with your Microsoft account using the browser
 az login
 ~~~~
 
-Create a service principle to login without authentication
+Create a service principle to login with a password
 ~~~~
 ./create_service_principle.sh
 ~~~~
