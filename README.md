@@ -18,6 +18,11 @@ Login with your Microsoft account using the browser
 az login
 ~~~~
 
+(Optional) set your user subscription
+~~~~
+az account set --subscription <subscriptionid> 
+~~~~
+
 Create a service principle to login with a password
 ~~~~
 ./create_service_principle.sh
