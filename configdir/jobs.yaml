@@ -1,0 +1,8 @@
+job_specifications:
+- id: myjob1
+  tasks:
+    - singularity_image: shub://singularityhub/busybox
+      shared_data_volumes:
+      - azureblob_vol
+      command: ls -t /azblob/APU_turbocharger_master
+
