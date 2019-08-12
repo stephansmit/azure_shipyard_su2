@@ -1,8 +1,9 @@
 job_specifications:
-- id: myjob1
+- id: su2_job
   tasks:
-    - singularity_image: shub://singularityhub/busybox
-      shared_data_volumes:
-      - azureblob_vol
-      command: ls -t /azblob/APU_turbocharger_master
+      - singularity_image: shub://stephansmit/su2_containers
+        shared_data_volumes:
+         - azureblob_vol
+        additional_singularity_options: [--pwd /azblob/APU_turbocharger_master]
+        command: /SU2/bin/SU2_CFD Jones.cfg
 

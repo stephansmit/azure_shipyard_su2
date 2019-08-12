@@ -2,7 +2,7 @@ batch_shipyard:
   storage_account_settings: mystorageaccount
 global_resources:
   singularity_images:
-  - shub://singularityhub/busybox
+          - shub://stephansmit/su2_containers
   volumes:
     shared_data_volumes:
       azureblob_vol:
@@ -11,18 +11,18 @@ global_resources:
         azure_blob_container_name: test
         container_path: /azblob
         mount_options:
-          - --use-https=true
+         - --use-https=true
         bind_options: rw
   files:
-  - destination:
-     storage_account_settings: mystorageaccount
-     data_transfer:
+   - destination:
+      storage_account_settings: mystorageaccount
+      data_transfer:
         remote_path: test/APU_turbocharger_master/
         blobxfer_extra_options: null
-    source:
-     exclude:
-     - '*.bak'
-     include:
-     - '*.cfg'
-     - '*.su2'
-     path: /home/azureuser/Documents/azure_shipyard_su2/APU_turbocharger_master/
+     source:
+      exclude:
+       - '*.bak'
+      include:
+       - '*.cfg'
+       - '*.su2'
+      path: /home/azureuser/Documents/azure_shipyard_su2/APU_turbocharger_master/
